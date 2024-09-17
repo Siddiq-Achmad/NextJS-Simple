@@ -1,0 +1,68 @@
+.content_about {
+	padding: var(--page-padding);
+	position: relative;
+}
+
+.content_about::before {
+	content: '';
+	position: absolute;
+	border-radius: 10px 10px 0 0;
+	height: calc(100% + (-1) * var(--trans-content));
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	background: url(/img/noise.png), radial-gradient(at top, #f9a132 0%, #ddd 100%);
+  background-size: 250px, 100%;
+}
+
+.content_about > * {
+	position: relative;
+    padding-top: 2rem;
+}
+
+.content_about__nav {
+    display: none;
+	/* display: flex; */
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: space-between;
+}
+
+.content_about__header h2 {
+	font-size: 4rem;
+	font-family: new-science-extended, sans-serif;
+	font-weight: 400;
+	margin: 8rem 1rem 10vh;
+	line-height: 0.9;
+}
+
+.content_about__text {
+	text-wrap: balance;
+	display: flex;
+	flex-direction: column;
+	gap: 10vh;
+	padding: 0 5vw;
+}
+
+.content_about__text p {
+	max-width: 700px;
+	font-size: 1.5rem;
+	line-height: 1.4;
+	margin: 0;
+	margin-left: auto;
+}
+
+.content_about__text p.highlight {
+	max-width: 1000px;
+	font-size: 2rem;
+	font-family: new-science-extended, sans-serif;
+	font-weight: 400;
+}
+
+.content_about__footer {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20vh;
+	transform: translateY(calc(-1 * var(--trans-content)));
+}

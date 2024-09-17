@@ -1,95 +1,501 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+import Head from 'next/head';
+import { useEffect, useRef, useState } from 'react';
 
-export default function Home() {
+import { preloadImages, getMousePos, lerp } from '@/lib/utils'; 
+import Lenis from '@studio-freight/lenis'; 
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import Link from 'next/link';
+import { RiContactsBook2Line, RiGroup2Line, RiHeartLine, RiHome2Line, RiOpenArmLine, RiServiceLine } from '@remixicon/react';
+import { useLoading } from '@/hooks/useLoading';
+import Splitting from 'splitting';
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+
+
+const page = () => {
+
+  const titlesRef = useRef([]);
+  const contentRefs = useRef([]); // This will store references to all .content--sticky elements
+
+
+
+  // Smooth scrolling initialization using Lenis
+  const initSmoothScrolling = () => {
+    const lenis = new Lenis({
+      lerp: 0.2, // Lower values create a smoother scroll effect
+      smoothWheel: true, // Enables smooth scrolling for mouse wheel events
+    });
+
+    // Update ScrollTrigger on scroll
+    lenis.on('scroll', () => ScrollTrigger.update());
+
+    // Recursive animation frame loop for smooth scroll
+    const scrollFn = (time) => {
+      lenis.raf(time);
+      requestAnimationFrame(scrollFn);
+    };
+    requestAnimationFrame(scrollFn);
+  };
+  // Scroll-triggered animations using GSAP
+  const scrollAnimations = () => {
+    contentRefs.current.forEach((el, index) => {
+      if (!el) return; // Make sure the element exists before running animations
+
+      const isLast = index === contentRefs.current.length - 1;
+
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: el,
+          start: 'top top',
+          end: '+=100%',
+          scrub: true,
+        },
+      })
+      .to(el, {
+        ease: 'none',
+        startAt: { filter: 'brightness(100%) contrast(100%)' },
+        filter: isLast ? 'none' : 'brightness(60%) contrast(135%)',
+        yPercent: isLast ? 0 : -15,
+      }, 0)
+      .to(el.querySelector('.content_home__img'), {
+        ease: 'power1.in',
+        yPercent: -40,
+        rotation: -20,
+      }, 0);
+
+
+    });
+  };
+
+  
+
+  useEffect(() => {
+  // Execute only on client-side
+  if((typeof document !== 'undefined') && (typeof window !== 'undefined')) {
+    preloadImages('.content_home__img').then(() => {
+      //document.body.classList.remove('loading');
+      initSmoothScrolling(); // Initialize smooth scrolling
+      scrollAnimations(); // Initialize scroll-triggered animations
+      
+    });
+  }
+
+  Splitting();
+  
+
+  // Animasi GSAP dengan ScrollTrigger
+  titlesRef.current.forEach((title) => {
+    const effect = title.dataset.effect;
+      // Effect 16
+      if (effect === '16') {
+        gsap.fromTo(title, {
+            transformOrigin: '0% 50%',
+            rotate: 3,
+        }, {
+            rotate: 0,
+            scrollTrigger: {
+                trigger: title,
+                start: 'top bottom',
+                end: 'top top',
+                scrub: true,
+            },
+        });
+
+        const words = title.querySelectorAll('.word');
+        gsap.fromTo(words, {
+            'will-change': 'opacity',
+            opacity: 0.1,
+        }, {
+            opacity: 1,
+            stagger: 0.05,
+            scrollTrigger: {
+                trigger: title,
+                start: 'top bottom-=20%',
+                end: 'center top+=20%',
+                scrub: true,
+            },
+        });
+    }
+    //Effect 17
+    if (effect === '17') {
+      const chars = title.querySelectorAll('.char');
+        
+        chars.forEach(char => gsap.set(char.parentNode, { perspective: 1000 })); 
+        
+        gsap.fromTo(chars, { 
+            'will-change': 'opacity, transform', 
+            opacity: 0,
+            rotateX: () => gsap.utils.random(-120,120),
+            z: () => gsap.utils.random(-200,200),
+        }, 
+        {
+            ease: 'none',
+            opacity: 1,
+            rotateX: 0,
+            z: 0,
+            stagger: 0.02,
+            scrollTrigger: {
+                trigger: title,
+                start: 'top bottom',
+                end: 'bottom top',
+                scrub: true,
+            }
+        });
+      }
+
+
+    // Effect 25
+    if (effect === '25') {
+        gsap.fromTo(title.querySelectorAll('.char'), {
+            'will-change': 'transform',
+            transformOrigin: '50% 100%',
+            scaleY: 0
+        }, {
+            ease: 'power3.in',
+            opacity: 1,
+            scaleY: 1,
+            stagger: 0.05,
+            scrollTrigger: {
+                trigger: title,
+                start: 'center center',
+                end: '+=500%',
+                scrub: true,
+                pin: title.parentNode,
+            },
+        });
+    }
+
+    // Effect 27
+    if (effect === '27') {
+        const words = [...title.querySelectorAll('.word')];
+
+        words.forEach(word => gsap.set(word.parentNode, { perspective: 1000 }));
+
+        gsap.fromTo(words, {
+            'will-change': 'opacity, transform',
+            z: () => gsap.utils.random(500, 950),
+            opacity: 0,
+            xPercent: () => gsap.utils.random(-100, 100),
+            yPercent: () => gsap.utils.random(-10, 10),
+            rotationX: () => gsap.utils.random(-90, 90),
+        }, {
+            ease: 'expo',
+            opacity: 1,
+            rotationX: 0,
+            rotationY: 0,
+            xPercent: 0,
+            yPercent: 0,
+            z: 0,
+            scrollTrigger: {
+                trigger: title,
+                start: 'center center',
+                end: '+=300%',
+                scrub: true,
+                pin: title.parentNode,
+            },
+            stagger: {
+                each: 0.006,
+                from: 'random',
+            },
+        });
+    }
+
+    // Effect 28
+    if (effect === '28') {
+      const words = [...title.querySelectorAll('.word')];
+        
+        for (const word of words) {
+
+            const chars = word.querySelectorAll('.char');
+            const charsTotal = chars.length;
+            
+            gsap.fromTo(chars, {
+                'will-change': 'transform, filter', 
+                transformOrigin: '50% 100%',
+                scale: position => {
+                    const factor = position < Math.ceil(charsTotal/2) ? position : Math.ceil(charsTotal/2) - Math.abs(Math.floor(charsTotal/2) - position) - 1;
+                    return gsap.utils.mapRange(0, Math.ceil(charsTotal/2), 0.5, 2.1, factor);
+                },
+                y: position => {
+                    const factor = position < Math.ceil(charsTotal/2) ? position : Math.ceil(charsTotal/2) - Math.abs(Math.floor(charsTotal/2) - position) - 1;
+                    return gsap.utils.mapRange(0, Math.ceil(charsTotal/2), 0, 60, factor);
+                },
+                rotation: position => {
+                    const factor = position < Math.ceil(charsTotal/2) ? position : Math.ceil(charsTotal/2) - Math.abs(Math.floor(charsTotal/2) - position) - 1;
+                    return position < charsTotal/2 ? gsap.utils.mapRange(0, Math.ceil(charsTotal/2), -4, 0, factor) : gsap.utils.mapRange(0, Math.ceil(charsTotal/2), 0, 4, factor);
+                },
+                filter: 'blur(12px) opacity(0)',
+            }, 
+            {
+                ease: 'power2.inOut',
+                y: 0,
+                rotation: 0,
+                scale: 1,
+                filter: 'blur(0px) opacity(1)',
+                scrollTrigger: {
+                    trigger: word,
+                    start: 'top bottom+=40%',
+                    end: 'top top+=15%',
+                    scrub: true,
+                },
+                stagger: {
+                    amount: 0.15,
+                    from: 'center'
+                }
+            });
+
+        }
+    }
+    // Effect 29
+    if (effect === '29') {
+      const words = [...title.querySelectorAll('.word')];
+        
+        for (const [pos,word] of words.entries()) {
+            
+            const chars = word.querySelectorAll('.char');
+            
+            gsap.fromTo(chars, {
+                'will-change': 'transform', 
+                transformOrigin: `${pos%2 ? 0 : 100}% ${pos%2 ? 100 : 0}%`,
+                scale: 0
+            }, 
+            {
+                ease: 'power4',
+                scale: 1,
+                stagger:  {
+                    each: 0.03,
+                    from: pos%2 ? 'end' : 'start'
+                },
+                scrollTrigger: {
+                    trigger: word,
+                    start: 'top bottom-=10%',
+                    end: 'top top',
+                    scrub: true,
+                }
+            });
+        }
+        
+    }
+    
+  });
+
+  return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+  };
+
+    
+  }, []);
+
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+    
+      <Head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>HOME | LUXIMA ID</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="favicon.ico"></link>
+        </Head>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        
+        <main className="home">
+        <div
+          className="frame_home frame_home--header"
+          style={{ backgroundImage: "url(img/7.png)" }}
+        >
+         
+				<nav className="frame_home__demos">
+          <Link
+            className="frame_home__demos-item"
+            href="/"
           >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
+            <div className="nav-icon"><RiHome2Line /></div>
+            <span className="nav-text">Home</span>
+          </Link>
+          <Link
+            className="frame_home__demos-item nav-link"
+            href="/about"
           >
-            Read our docs
-          </a>
+            <div className="nav-icon"><RiGroup2Line /></div>
+            <span className="nav-text">About</span>
+          </Link>
+          <Link
+            className="frame_home__demos-item nav-link"
+            href="/work"
+          >
+            <div className="nav-icon"><RiOpenArmLine /></div>
+            <span className="nav-text">Work</span>
+          </Link>
+          
+          <Link
+            className="frame_home__demos-item nav-link"
+            href="/services"
+          >
+            <div className="nav-icon"><RiServiceLine /></div>
+            <span className="nav-text">Services</span>
+          </Link>
+          <Link
+            className="frame_home__demos-item nav-link"
+            href="/contact"
+          >
+            <div className="nav-icon"><RiContactsBook2Line /></div>
+            <span className="nav-text">Contact</span>
+          </Link>
+				</nav>
+          
+          <div className="frame_home__heading">
+
+            <h2 className="content_home__title">
+              <i>LUXIMA</i> Studio
+            </h2>
+            <p className="text-meta">Creative Studio, Web Design & Development, Photography & Content Marketing </p>
+          </div>
         </div>
+        <div className="content_home content_home--highlight content_home--intro" >
+          <p className="text-large" data-splitting 
+                data-effect="29" 
+                ref={(el) => titlesRef.current.push(el)}>
+            Their cognitive emissions, deemed inconsequential, formed a discarded
+            wasteland of uncharted thoughts and untold narratives.
+          </p>
+        </div>
+        <div className="wrap">
+          
+          <div className="content_home content_home--sticky content_home--grid bg-1" ref={el => contentRefs.current[0] = el} >
+            <img
+              className="content_home__img content_home__img--large content_home__img--left"
+              src="img/8.png"
+            />
+            <h2 className="content_home__title" data-splitting 
+                data-effect="28" 
+                ref={(el) => titlesRef.current.push(el)}>
+              <i>The</i> Algorithm
+            </h2>
+            <p className="content_home__text content_home__text--left text-meta" data-splitting 
+                data-effect="16" 
+                ref={(el) => titlesRef.current.push(el)}>
+              The algorithm's workings are shrouded in complexity, and its
+              decision-making processes are inscrutable to the general populace.
+            </p>
+          </div>
+          <div className="content_home content_home--sticky content_home--grid bg-2" ref={el => contentRefs.current[1] = el} >
+            <img
+              className="content_home__img content_home__img--large content_home__img--left"
+              src="img/9.png"
+            />
+            <h2 className="content_home__title" data-splitting 
+                data-effect="28" 
+                ref={(el) => titlesRef.current.push(el)}>
+              <i>The</i> Dogma
+            </h2>
+            <p className="content_home__text content_home__text--left text-meta" data-splitting 
+                data-effect="16" 
+                ref={(el) => titlesRef.current.push(el)}>
+              The digital gospel etched into the very code of the algorithmic society,
+              served as the bedrock of the cognitive regime.
+            </p>
+          </div>
+          <div className="content_home content_home--sticky content_home--grid bg-3" ref={el => contentRefs.current[2] = el} >
+            <img
+              className="content_home__img content_home__img--large content_home__img--left"
+              src="img/7.png"
+            />
+            <h2 className="content_home__title" data-splitting 
+                data-effect="28" 
+                ref={(el) => titlesRef.current.push(el)}>
+              <i>The</i> Architects
+            </h2>
+            <p className="content_home__text content_home__text--left text-meta" data-splitting 
+                data-effect="16" 
+                ref={(el) => titlesRef.current.push(el)}>
+              The elusive entities, lacking human form, operate in the shadows,
+              skillfully shaping societal norms through the complex interplay of
+              algorithms and Dogmas.
+            </p>
+          </div>
+          <div className="content_home content_home--sticky content_home--grid bg-4" ref={el => contentRefs.current[3] = el} >
+            <img
+              className="content_home__img content_home__img--large content_home__img--left"
+              src="img/10.png"
+            />
+            <h2 className="content_home__title" data-splitting 
+                data-effect="28" 
+                ref={(el) => titlesRef.current.push(el)}>
+              <i>The</i> Wasteland
+            </h2>
+            <p className="content_home__text content_home__text--left text-meta" data-splitting 
+                data-effect="16" 
+                ref={(el) => titlesRef.current.push(el)}>
+              This overlooked realm, a consequence of algorithmic judgments, is a
+              haunting landscape filled with the echoes of untold stories and
+              uncharted thoughts.
+            </p>
+          </div>
+          <div className="content_home content_home--sticky content_home--grid bg-5"  ref={el => contentRefs.current[4] = el} >
+            <img
+              className="content_home__img content_home__img--large content_home__img--left"
+              src="img/11.png"
+            />
+            <h2 className="content_home__title" data-splitting 
+                data-effect="28" 
+                ref={(el) => titlesRef.current.push(el)}>
+              <i>The</i> Narrative
+            </h2>
+            <p className="content_home__text content_home__text--left text-meta" data-splitting 
+                data-effect="16" 
+                ref={(el) => titlesRef.current.push(el)}>
+              "The Narrative" unfolds as the omnipresent thread weaving through the
+              fabric of the algorithmic society.
+            </p>
+          </div>
+          <div className="content_home content_home--sticky content_home--grid bg-6" ref={el => contentRefs.current[5] = el} >
+            <img
+              className="content_home__img content_home__img--large content_home__img--left"
+              src="img/12.png"
+            />
+            <h2 className="content_home__title" data-splitting 
+                data-effect="28" 
+                ref={(el) => titlesRef.current.push(el)}>
+              <i>The</i> Opulence
+            </h2>
+            <p className="content_home__text content_home__text--left text-meta"data-splitting 
+                data-effect="25" 
+                ref={(el) => titlesRef.current.push(el)}>
+              "The Opulence" epitomizes the cognitive elite's wealth in the
+              algorithmic society, where opulent thoughts and experiences shape the
+              societal narrative.
+            </p>
+          </div>
+        </div>
+        <div className="content_home content_home--highlight content_home--outro">
+          <p className="text-large" data-splitting 
+                data-effect="16" 
+                ref={(el) => titlesRef.current.push(el)}>
+            Lost in perpetual dependency, inhabitants of the Synthetic Era found
+            solace in cryptic simulations, where pain ebbed and cognitive loads
+            momentarily lightened.
+          </p>
+          <img className="content_home__img spacer" src="img/7.png" />
+        </div>
+        <footer className="frame_home frame_home--footer">
+          <p className="frame_home__credits">Built with <RiHeartLine /> by <a href="https://siddiq.luxima.id">Siddiq Achmad</a></p>
+          <p className="frame_home__author"><span>Made by <a href="https://luxima.id">LUXIMA.ID</a></span> </p>
+			</footer>
+        
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+
+    </>
   );
 }
+
+export default page;

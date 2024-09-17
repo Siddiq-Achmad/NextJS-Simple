@@ -1,0 +1,197 @@
+  .menu-bar, 
+  .menu-overlay-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 4em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .menu-bar a, .menu-open p{
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .menu-close p {
+    color: #000;
+    cursor: pointer;
+  }
+  
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #c5fb45;
+    z-index: 1000;
+    display: flex;
+    align-items: flex-start;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+  }
+  .menu-close-icon {
+    flex: 2;
+    display: flex;
+    flex-flow: column;
+    align-self: flex-end;
+    cursor: pointer;
+    padding: 4em;
+  }
+  .menu-copy {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2em;
+  }
+  .menu-preview {
+    flex: 4;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    align-items: flex-end;
+    padding: 2em;
+  }
+  .menu-close-icon p {
+    font-size: 100px;
+    -webkit-text-stroke: 5px #c5fb45;
+    height: 70%;
+  }
+  .menu-link-item {
+    width: max-content;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .menu-link-item-holder {
+    position: relative;
+    padding: 0.5em 0;
+  }
+  .menu-link-item-holder a{
+    color: #000;
+    font-size: 80px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 85%;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+  }
+  .menu-info {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: auto;
+    padding: 4em 0;
+  }
+  .menu-info-col {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  /* MENU */
+
+.menu-button{
+
+  width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	z-index: 1;
+	pointer-events: none;
+}
+.menu-button::before{
+  color: var(--color-border);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.menu-icon{
+  display: none;
+}
+
+.menu-title{
+  display: block;
+  font-family: var(--font-space-grotesk);
+  font-size: 20px;
+  font-weight: 600;
+	width: 175px;
+	height: 120px;
+	color:  #fff;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+	background: none;
+}
+.menu-title::before{
+	content: '';
+	background: #e6e6e6;
+	-webkit-clip-path: path("M154.5,88.5 C131,113.5 62.5,110 30,89.5 C-2.5,69 -3.5,42 4.5,25.5 C12.5,9 33.5,-6 85,3.5 C136.5,13 178,63.5 154.5,88.5 Z");
+	clip-path: path("M154.5,88.5 C131,113.5 62.5,110 30,89.5 C-2.5,69 -3.5,42 4.5,25.5 C12.5,9 33.5,-6 85,3.5 C136.5,13 178,63.5 154.5,88.5 Z");
+	transition: clip-path 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55), -webkit-clip-path 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55), background 0.5s ease;
+}
+.menu-title:hover::before{
+	background: var(--color-bg-alt);
+	-webkit-clip-path: path("M143,77 C117,96 74,100.5 45.5,91.5 C17,82.5 -10.5,57 5.5,31.5 C21.5,6 79,-5.5 130.5,4 C182,13.5 169,58 143,77 Z");
+	clip-path: path("M143,77 C117,96 74,100.5 45.5,91.5 C17,82.5 -10.5,57 5.5,31.5 C21.5,6 79,-5.5 130.5,4 C182,13.5 169,58 143,77 Z");
+}
+.menu-title::after{
+	content: '';
+	height: 86%;
+	width: 97%;
+	top: 5%;
+	border-radius: 58% 42% 55% 45% / 56% 45% 55% 44%;
+	border: 1px solid var(--color-bg-alt);
+	transform: rotate(-20deg);
+	z-index: -1;
+	transition: transform 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55);
+}
+.menu-title:hover::after{
+	transform: translate3d(0,-5px,0);
+}
+.menu-title span{
+	display: block;
+	transition: transform 0.3s ease;
+	mix-blend-mode: difference;
+}
+.menu-title:hover span{
+	transform: translate3d(0,-10px,0);
+}
+
+  
+  @media(max-width: 900px) {
+    .menu-close-icon{
+      display: none;
+    }
+    .menu-bar, 
+    .menu-overlay-bar {
+      padding: 2em;
+    }
+    .menu-icon{
+      display: block;
+    }
+  
+    .menu-title{
+      display: none;
+    }
+  
+    .menu-copy {
+      padding-top: 8em;
+    }
+  
+   .menu-link-item-holder a {
+      font-size: 60px;
+    }
+  }
+  
+  
