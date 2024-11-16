@@ -1,29 +1,30 @@
 "use client";
-import Head from 'next/head';
-import { useEffect, useRef, useState } from 'react';
-
-import { preloadImages, getMousePos, lerp } from '@/lib/utils'; 
-import Lenis from '@studio-freight/lenis'; 
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-import Link from 'next/link';
-import { RiContactsBook2Line, RiGroup2Line, RiHeartLine, RiHome2Line, RiOpenArmLine, RiServiceLine } from '@remixicon/react';
-import { useLoading } from '@/hooks/useLoading';
-import Splitting from 'splitting';
+import Head from 'next/head'
+import { useEffect, useRef } from 'react'
+import { preloadImages } from '@/lib/utils'
+import Lenis from '@studio-freight/lenis'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+import Link from 'next/link'
+import { RiContactsBook2Line, RiGroup2Line, RiHeartLine, RiHome2Line, RiOpenArmLine, RiServiceLine } from '@remixicon/react'
+import Splitting from 'splitting'
+import './page.module.css'
+import Slider from './components/slider';
+import ParallaxInfo from './components/ParallaxText';
+import MenuBottom from './components/menu/MenuBottom';
+import { motion } from "motion/react"
 
 
 
 gsap.registerPlugin(ScrollTrigger);
-
-
-
 
 const page = () => {
 
   const titlesRef = useRef([]);
   const contentRefs = useRef([]); // This will store references to all .content--sticky elements
 
-
+  
+  
 
   // Smooth scrolling initialization using Lenis
   const initSmoothScrolling = () => {
@@ -77,9 +78,9 @@ const page = () => {
 
   useEffect(() => {
   // Execute only on client-side
-  if((typeof document !== 'undefined') && (typeof window !== 'undefined')) {
+  if(typeof window !== 'undefined') {
     preloadImages('.content_home__img').then(() => {
-      //document.body.classList.remove('loading');
+      document.body.classList.remove('loading');
       initSmoothScrolling(); // Initialize smooth scrolling
       scrollAnimations(); // Initialize scroll-triggered animations
       
@@ -87,8 +88,13 @@ const page = () => {
   }
 
   Splitting();
-  
 
+
+
+  
+        
+        
+  
   // Animasi GSAP dengan ScrollTrigger
   titlesRef.current.forEach((title) => {
     const effect = title.dataset.effect;
@@ -289,88 +295,110 @@ const page = () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
   };
 
+ 
+
     
   }, []);
 
 
   return (
-    <>
     
+    <>
+      
       <Head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>HOME | LUXIMA ID</title>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
-        <meta name="author" content="Codrops" />
+        <meta name="author" content="Luxima" />
         <link rel="shortcut icon" href="favicon.ico"></link>
         </Head>
 
         
-        <main className="home">
+        <main className="home bg-image">
         <div
           className="frame_home frame_home--header"
-          style={{ backgroundImage: "url(img/7.png)" }}
+          style={{ backgroundImage: "url(img/7.png)", backgroundSize: "60vw" }}
         >
+        <motion.div 
+          animate={{ x: "0%", opacity: 1 }}
+          initial={{ x: "-100%", opacity: 0 }}
+          transition={{ delay: 1.5, duration: 0.5}}
+          className='frame_home__title'>
+         hello@luxima.id
+        </motion.div>
+        <motion.div 
+          animate={{ x: "0%", opacity: 1 }}
+          initial={{ x: "-100%", opacity: 0 }}
+          transition={{ delay: 1.6, duration: 0.5}}
+          className='frame_home__back'>
+          +62811 611 1662
+        </motion.div>
+        <motion.div 
+          animate={{ x: "0%", opacity: 1 }}
+          initial={{ x: "-100%", opacity: 0 }}
+          transition={{ delay: 1.7, duration: 0.5}}
+          className='frame_home__prev'>
+          
+        </motion.div>
+        <motion.div 
+        animate={{ x: "0%", opacity: 1 }}
+          initial={{ x: "-100%", opacity: 0 }}
+          transition={{ delay: 1.8, duration: 0.5}}
+          className='frame_home__sub'>
+          LUXIMA.ID
+          </motion.div>
+          <motion.div 
+            animate={{ x: "0%", opacity: 1 }}
+          initial={{ x: "-100%", opacity: 0 }}
+          transition={{ delay: 1.9, duration: 0.5}}
+            className='frame_home__sponsor'>
+          Social Media
+          </motion.div>
          
-				<nav className="frame_home__demos">
-          <Link
-            className="frame_home__demos-item"
-            href="/"
-          >
-            <div className="nav-icon"><RiHome2Line /></div>
-            <span className="nav-text">Home</span>
-          </Link>
-          <Link
-            className="frame_home__demos-item nav-link"
-            href="/about"
-          >
-            <div className="nav-icon"><RiGroup2Line /></div>
-            <span className="nav-text">About</span>
-          </Link>
-          <Link
-            className="frame_home__demos-item nav-link"
-            href="/work"
-          >
-            <div className="nav-icon"><RiOpenArmLine /></div>
-            <span className="nav-text">Work</span>
-          </Link>
+				<MenuBottom/>
           
-          <Link
-            className="frame_home__demos-item nav-link"
-            href="/services"
-          >
-            <div className="nav-icon"><RiServiceLine /></div>
-            <span className="nav-text">Services</span>
-          </Link>
-          <Link
-            className="frame_home__demos-item nav-link"
-            href="/contact"
-          >
-            <div className="nav-icon"><RiContactsBook2Line /></div>
-            <span className="nav-text">Contact</span>
-          </Link>
-				</nav>
-          
-          <div className="frame_home__heading">
-
-            <h2 className="content_home__title">
+          <motion.div
+            animate={{ x: "0%", opacity: 1 }}
+            initial={{ x: "100%", opacity: 0 }}
+            transition={{ delay: 1, duration: 0.5}}
+           className="frame_home__heading">
+            <Slider/>
+            
+            <motion.h2 
+              animate={{ y: "0%", opacity: 1 }}
+              initial={{ y: "100%", opacity: 0 }}
+              transition={{ delay: 1.5, duration: 1}}
+              className="content_home__title" data-splitting >
               <i>LUXIMA</i> Studio
-            </h2>
-            <p className="text-meta">Creative Studio, Web Design & Development, Photography & Content Marketing </p>
-          </div>
+            </motion.h2>
+            <motion.p 
+              animate={{ y: "0%", opacity: 1 }}
+              initial={{ y: "-100%", opacity: 0 }}
+              transition={{ delay: 1.8, duration: 1}}
+            className="text-meta" data-splitting >Creative Studio, Web Design & Development, Photography & Content Marketing </motion.p>
+            
+          </motion.div>
+         
         </div>
+        
         <div className="content_home content_home--highlight content_home--intro" >
           <p className="text-large" data-splitting 
                 data-effect="29" 
                 ref={(el) => titlesRef.current.push(el)}>
-            Their cognitive emissions, deemed inconsequential, formed a discarded
-            wasteland of uncharted thoughts and untold narratives.
+                  Transforming visions into impactful digital and creative experiences.
+            
           </p>
+          <div className='content_home-end'>
+            <ParallaxInfo/>
+          </div>
+          
         </div>
+         
         <div className="wrap">
           
-          <div className="content_home content_home--sticky content_home--grid bg-1" ref={el => contentRefs.current[0] = el} >
+          <div className="content_home content_home--sticky content_home--grid" ref={el => contentRefs.current[0] = el} >
             <img
               className="content_home__img content_home__img--large content_home__img--left"
               src="img/8.png"
@@ -378,16 +406,16 @@ const page = () => {
             <h2 className="content_home__title" data-splitting 
                 data-effect="28" 
                 ref={(el) => titlesRef.current.push(el)}>
-              <i>The</i> Algorithm
+              <i>About</i> Us
             </h2>
             <p className="content_home__text content_home__text--left text-meta" data-splitting 
                 data-effect="16" 
                 ref={(el) => titlesRef.current.push(el)}>
-              The algorithm's workings are shrouded in complexity, and its
-              decision-making processes are inscrutable to the general populace.
+             LUXIMA.ID adalah perusahaan yang berdedikasi di bidang <span className='italic'>Creative Studio, Web Development & System, Content Marketing, serta Wedding Photography & Wedding Planner. </span>
+             Berdiri dengan tujuan menghadirkan solusi kreatif yang inovatif, LUXIMA.ID menggabungkan seni dan teknologi untuk menghasilkan hasil yang inspiratif dan bernilai bagi klien kami.
             </p>
           </div>
-          <div className="content_home content_home--sticky content_home--grid bg-2" ref={el => contentRefs.current[1] = el} >
+          <div className="content_home content_home--sticky content_home--grid" ref={el => contentRefs.current[1] = el} >
             <img
               className="content_home__img content_home__img--large content_home__img--left"
               src="img/9.png"
@@ -395,16 +423,19 @@ const page = () => {
             <h2 className="content_home__title" data-splitting 
                 data-effect="28" 
                 ref={(el) => titlesRef.current.push(el)}>
-              <i>The</i> Dogma
+              <i>Vision &</i> Mission
             </h2>
             <p className="content_home__text content_home__text--left text-meta" data-splitting 
                 data-effect="16" 
                 ref={(el) => titlesRef.current.push(el)}>
-              The digital gospel etched into the very code of the algorithmic society,
-              served as the bedrock of the cognitive regime.
+              <strong>Visi:</strong> Menjadi mitra utama bagi individu dan bisnis dalam mewujudkan ide kreatif dan solusi digital yang unggul. <br/>
+              <strong>Misi:</strong>
+              Menghadirkan layanan berkualitas tinggi di bidang kreatif, pemasaran konten, dan teknologi.
+              Membantu klien menciptakan cerita visual yang berdampak dan berkesan melalui pendekatan fotografi profesional dan perencanaan acara.
+              Mengoptimalkan kehadiran digital klien dengan pendekatan pemasaran konten yang tepat sasaran.
             </p>
           </div>
-          <div className="content_home content_home--sticky content_home--grid bg-3" ref={el => contentRefs.current[2] = el} >
+          <div className="content_home content_home--sticky content_home--grid" ref={el => contentRefs.current[2] = el} >
             <img
               className="content_home__img content_home__img--large content_home__img--left"
               src="img/7.png"
@@ -412,17 +443,18 @@ const page = () => {
             <h2 className="content_home__title" data-splitting 
                 data-effect="28" 
                 ref={(el) => titlesRef.current.push(el)}>
-              <i>The</i> Architects
+              <i>Our</i> Services
             </h2>
-            <p className="content_home__text content_home__text--left text-meta" data-splitting 
+            <ul className="content_home__text content_home__text--left text-meta" data-splitting 
                 data-effect="16" 
                 ref={(el) => titlesRef.current.push(el)}>
-              The elusive entities, lacking human form, operate in the shadows,
-              skillfully shaping societal norms through the complex interplay of
-              algorithms and Dogmas.
-            </p>
+                <li>Creative Studio</li>
+                <li>Web Development & System</li>
+                <li>Content Marketing</li>
+                <li>Wedding Photography & Wedding Planner</li>
+            </ul>
           </div>
-          <div className="content_home content_home--sticky content_home--grid bg-4" ref={el => contentRefs.current[3] = el} >
+          <div className="content_home content_home--sticky content_home--grid" ref={el => contentRefs.current[3] = el} >
             <img
               className="content_home__img content_home__img--large content_home__img--left"
               src="img/10.png"
@@ -430,17 +462,20 @@ const page = () => {
             <h2 className="content_home__title" data-splitting 
                 data-effect="28" 
                 ref={(el) => titlesRef.current.push(el)}>
-              <i>The</i> Wasteland
+              <i>Why</i> Us
             </h2>
-            <p className="content_home__text content_home__text--left text-meta" data-splitting 
+            <ul className="content_home__text content_home__text--left text-meta" data-splitting 
                 data-effect="16" 
                 ref={(el) => titlesRef.current.push(el)}>
-              This overlooked realm, a consequence of algorithmic judgments, is a
-              haunting landscape filled with the echoes of untold stories and
-              uncharted thoughts.
-            </p>
+              
+                <li><strong>Solusi Menyeluruh:</strong> Dari branding hingga pengembangan web, kami menyediakan layanan komprehensif untuk memenuhi kebutuhan bisnis dan individu.</li>
+                <li><strong>Kreativitas & Teknologi:</strong> Kami menggabungkan pendekatan kreatif dengan inovasi teknologi, memberikan pengalaman yang memukau dan fungsional.</li>
+                <li><strong>Tim Berpengalaman:</strong> Didukung oleh tim profesional yang berpengalaman di bidangnya, kami siap membantu klien mencapai hasil terbaik.</li>
+                <li><strong>Pendekatan Klien yang Personal:</strong> Kami percaya setiap klien unik; pendekatan kami selalu disesuaikan dengan kebutuhan spesifik mereka untuk hasil yang memuaskan.</li>
+              
+            </ul>
           </div>
-          <div className="content_home content_home--sticky content_home--grid bg-5"  ref={el => contentRefs.current[4] = el} >
+          <div className="content_home content_home--sticky content_home--grid"  ref={el => contentRefs.current[4] = el} >
             <img
               className="content_home__img content_home__img--large content_home__img--left"
               src="img/11.png"
@@ -448,16 +483,15 @@ const page = () => {
             <h2 className="content_home__title" data-splitting 
                 data-effect="28" 
                 ref={(el) => titlesRef.current.push(el)}>
-              <i>The</i> Narrative
+              <i>The </i> Portofolio
             </h2>
             <p className="content_home__text content_home__text--left text-meta" data-splitting 
                 data-effect="16" 
                 ref={(el) => titlesRef.current.push(el)}>
-              "The Narrative" unfolds as the omnipresent thread weaving through the
-              fabric of the algorithmic society.
+              Di setiap proyek, kami bangga menghasilkan karya yang berkualitas dan sesuai harapan klien. Kami memiliki portofolio yang mencakup berbagai proyek kreatif, web development, serta dokumentasi pernikahan yang elegan dan berkesan.
             </p>
           </div>
-          <div className="content_home content_home--sticky content_home--grid bg-6" ref={el => contentRefs.current[5] = el} >
+          <div className="content_home content_home--sticky content_home--grid" ref={el => contentRefs.current[5] = el} >
             <img
               className="content_home__img content_home__img--large content_home__img--left"
               src="img/12.png"
@@ -465,25 +499,25 @@ const page = () => {
             <h2 className="content_home__title" data-splitting 
                 data-effect="28" 
                 ref={(el) => titlesRef.current.push(el)}>
-              <i>The</i> Opulence
+              <i>Client </i>Testimonials
             </h2>
-            <p className="content_home__text content_home__text--left text-meta"data-splitting 
-                data-effect="25" 
+            <ul className="content_home__text content_home__text--left text-meta"data-splitting 
+                data-effect="16" 
                 ref={(el) => titlesRef.current.push(el)}>
-              "The Opulence" epitomizes the cognitive elite's wealth in the
-              algorithmic society, where opulent thoughts and experiences shape the
-              societal narrative.
-            </p>
+              
+                <li><strong>Mulyadi </strong><i>Staff Dipo</i><br/>Hasilnya sangat memuaskan, rekomended bgt nih untuk yg mw abadikan moment spesialnya </li>
+                <li><strong>Yulia Amira</strong><br/>Thank you Luxima and the team for the idea, the concept, the direction of the style, the tone of photos and videos and above all, thanks a bunch for your patience</li>
+              
+            </ul>
           </div>
         </div>
         <div className="content_home content_home--highlight content_home--outro">
           <p className="text-large" data-splitting 
-                data-effect="16" 
+                data-effect="29" 
                 ref={(el) => titlesRef.current.push(el)}>
-            Lost in perpetual dependency, inhabitants of the Synthetic Era found
-            solace in cryptic simulations, where pain ebbed and cognitive loads
-            momentarily lightened.
+            Beauty and quality need the right time to be conceived and realised even in a world that is in too much of a hurry.
           </p>
+          <Link href='/contact' className="btn btn-large">Contact Us</Link>
           <img className="content_home__img spacer" src="img/7.png" />
         </div>
         <footer className="frame_home frame_home--footer">

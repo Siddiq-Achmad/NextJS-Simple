@@ -9,6 +9,7 @@
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+    
   }
 
   .menu-bar a, .menu-open p{
@@ -32,6 +33,10 @@
     display: flex;
     align-items: flex-start;
     clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+    background-image: url('/img/svg/mix-square-circle-quarter-corners-donut.svg');
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: 28vw;
   }
   .menu-close-icon {
     flex: 2;
@@ -46,8 +51,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: start;
     padding: 2em;
+    margin:auto
   }
   .menu-preview {
     flex: 4;
@@ -56,11 +62,20 @@
     align-self: flex-end;
     align-items: flex-end;
     padding: 2em;
+    
+    
   }
   .menu-close-icon p {
     font-size: 100px;
     -webkit-text-stroke: 5px #c5fb45;
     height: 70%;
+  }
+  .menu-links {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    padding: 2em;
+
   }
   .menu-link-item {
     width: max-content;
@@ -86,6 +101,9 @@
     width: 100%;
     margin: auto;
     padding: 4em 0;
+    justify-content: space-between;
+    align-items: end;
+    text-align: end;
   }
   .menu-info-col {
     flex: 2;
@@ -141,7 +159,7 @@
 	transition: clip-path 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55), -webkit-clip-path 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55), background 0.5s ease;
 }
 .menu-title:hover::before{
-	background: var(--color-bg-alt);
+	background: #c5fb45;
 	-webkit-clip-path: path("M143,77 C117,96 74,100.5 45.5,91.5 C17,82.5 -10.5,57 5.5,31.5 C21.5,6 79,-5.5 130.5,4 C182,13.5 169,58 143,77 Z");
 	clip-path: path("M143,77 C117,96 74,100.5 45.5,91.5 C17,82.5 -10.5,57 5.5,31.5 C21.5,6 79,-5.5 130.5,4 C182,13.5 169,58 143,77 Z");
 }
@@ -193,5 +211,7 @@
       font-size: 60px;
     }
   }
+
+  
   
   

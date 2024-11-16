@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import {Preview} from './preview';
 import {Item} from './item';
 import './page.css';
+import {motion} from 'framer-motion';
 
 const page = () => {
     
@@ -142,7 +143,11 @@ const page = () => {
 
 
   return (
-    <div className='page-content' ref={bodyRef}>
+    <motion.div 
+      animate={{ y: "0%", opacity: 1 }}
+      initial={{ y: "100%", opacity: 0 }}
+      transition={{ delay: 0.6  , duration: 1}}
+      className='page-content' ref={bodyRef}>
       <div className='page-work'>
         <div className="content_work" ref={contentElRef}>
             <div className="item" ref={itemRef}>
@@ -337,7 +342,7 @@ const page = () => {
         </section>
         </div>
 
-    </div>
+    </motion.div>
   )
 }
 

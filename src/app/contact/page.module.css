@@ -1,0 +1,86 @@
+.main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/img/bg3.svg');
+}
+
+.section {
+    width: 80vw;
+    color: white;
+}
+.background {
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.link {
+    font-size: 6rem;
+    font-weight: 500;
+}
+
+.introLine {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;  
+
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.introLine p {
+    font-weight: 500;
+    font-size: 2rem;
+    margin: 0px;
+    overflow: hidden ;
+}
+
+.introLine:nth-of-type(5),
+.introLine:nth-of-type(6) {
+    display: inline-flex;
+}
+
+.introLine:nth-of-type(6) {
+    right: -40px;
+    position: relative;
+}
+
+.introLine p {
+    margin: 0px;
+}
+
+@media screen and (min-width: 63em) {
+    .section {
+        width: 70vw;
+    }
+
+    .introLine {
+        font-weight: 500;
+        font-size: 5rem;
+    }
+
+    .introLine p {
+        font-weight: 500;
+        font-size: 5rem;
+    }
+}
+
+@media screen and (min-width: 90em) {
+    .section {
+            width: 60vw;
+        }
+    .introLine {
+            font-weight: 500;
+            font-size: 7.5rem;
+        }
+    
+        .introLine p {
+            font-weight: 500;
+            font-size: 7.5rem;
+        }
+}

@@ -4,13 +4,17 @@ import Link from 'next/link';
 import Image from 'next/image';
 import "./menu.css";
 import { RiHeartFill, RiMenuLine } from "@remixicon/react";
+import { usePathname } from 'next/navigation';
 
 const menuLinks = [
     {path : "/", name : "Home"},
     {path : "/about", name : "About"},
     {path : "/work", name : "Work"},
     {path : "/services", name : "Service"},
+    {path : "/gallery", name : "Gallery"},
+    {path : "/blog", name : "blog"},
     {path : "/contact", name : "Contact"},
+
 ];
 
 import {gsap} from 'gsap';
@@ -20,6 +24,8 @@ import { useGSAP } from '@gsap/react';
 const Menu = () => {
     const container = useRef();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const pathname = usePathname();
 
     const tl = useRef();
 
@@ -33,20 +39,20 @@ const Menu = () => {
             tl.current = gsap
                 .timeline({ paused : true })
                 .to(".menu-overlay", {
-                    duration : 1,
+                    duration : 0.5,
                     clipPath : "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
                     ease : "power4.out"
                 })
                 .to(".menu-link-item-holder", {
                     y : 0,
-                    duration : 1,
+                    duration : 0.5,
                     stagger : 0.1,
                     ease : "power4.out",
                     delay : -0.75,
                 })
                 .to(".menu-info-col-item", {
                     y : 0,
-                    duration : 1,
+                    duration : 0.5,
                     stagger : 0.1,
                     ease : "power4.in",
                     delay : -0.75,
@@ -69,7 +75,7 @@ const Menu = () => {
     <div className="menu-container" ref={container}>
         <div className="menu-bar">
             <div className="menu-logo">
-                <Link href="/"><Image src="img/logoIcon.svg" alt="logo" width={120} height={36} /></Link>
+                <Link href="/"><Image src="/img/logoIcon.svg" alt="logo" width={120} height={36} /></Link>
             </div>
             <div className="menu-open" onClick={toggleMenu}>
                 <div className="menu-button">

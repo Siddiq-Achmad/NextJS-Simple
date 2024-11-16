@@ -1,0 +1,47 @@
+.service {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px 20px 10px;
+    border-top: 1px solid rgb(201, 201, 201);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.service:last-of-type {
+    border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+.service:hover {
+    opacity: 0.5;
+}
+
+.service:hover h2 {
+    transform: translateX(-10px);
+}
+
+.service:hover p {
+    transform: translateX(10px);
+}
+
+.service h2 {
+    font-size: 2rem;
+    margin: 0px;
+    font-weight: 400;
+    transition: all 0.4s;
+}
+
+.service p {
+    transition: all 0.4s;
+    font-weight: 300;
+}
+
+@media screen and (min-width: 63em) {
+    .service {
+        padding: 50px 100px 50px 100px;
+    }
+    .service h2{
+        font-size: 4rem;
+    }
+}

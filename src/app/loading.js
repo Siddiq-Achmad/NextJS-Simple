@@ -3,7 +3,7 @@
 import React,{ useEffect } from 'react';
 import gsap from 'gsap';
 
-const loading = () => {
+const Loading = () => {
   useEffect(() => {
     const tl = gsap.timeline({ repeat: -1 });
     tl.to('.preloader', {
@@ -23,4 +23,4 @@ const loading = () => {
   )
 }
 
-export default loading
+export default Loading
