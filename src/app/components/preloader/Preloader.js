@@ -19,7 +19,8 @@ const Preloader = ({ onComplete }) => {
         setProgress(currentProgress);
       },
       onComplete: function () {
-        gsap.to('.preloader', { opacity: 0, y: '100%', duration: 0.4, ease: 'power3.inOut' });
+         gsap.to('.preloader', { opacity: 0, y: 20, duration: 0.4, ease: 'power3.inOut' });
+        
         setTimeout(() => {
           onComplete(); // Call the onComplete function after loading
         }, 20); // Delay of 0.2 seconds before removing the preloader

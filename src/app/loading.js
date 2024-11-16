@@ -7,10 +7,11 @@ const Loading = () => {
   useEffect(() => {
     const tl = gsap.timeline({ repeat: -1 });
     tl.to('.preloader', {
-        width: '100%',
+        opacity: 1,
+        scale:1,
         duration: 1,
         ease: 'power1.inOut',
-    }).to('.preloader', { width: '0%', duration: 1, ease: 'power1.inOut' });
+    }).to('.preloader', {opacity: 0, scale: 0, duration: 1, ease: 'power1.inOut' });
 }, []);
 
   return (

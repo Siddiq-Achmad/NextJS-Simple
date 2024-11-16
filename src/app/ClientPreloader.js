@@ -29,11 +29,11 @@ export default function ClientPreloader({ children }) {
   }, [pathname]);
 
   return (
-    <AnimatePresence >
+    <AnimatePresence mode="wait" >
       {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
       {!isLoading && (
         
-        <AnimatePresence mode="wait">
+        <>
           {/* {pathname && (
           <motion.div
               key={pathname}
@@ -47,7 +47,7 @@ export default function ClientPreloader({ children }) {
             <BacktoTop/>
           {/* </motion.div>
           )} */}
-       </AnimatePresence>
+       </>
       )}
     </AnimatePresence>
     

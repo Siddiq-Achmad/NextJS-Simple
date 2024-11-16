@@ -80,7 +80,7 @@ const page = () => {
   // Execute only on client-side
   if(typeof window !== 'undefined') {
     preloadImages('.content_home__img').then(() => {
-      document.body.classList.remove('loading');
+      //document.body.classList.remove('loading');
       initSmoothScrolling(); // Initialize smooth scrolling
       scrollAnimations(); // Initialize scroll-triggered animations
       
@@ -90,7 +90,7 @@ const page = () => {
   Splitting();
 
 
-
+  
   
         
         
@@ -319,7 +319,7 @@ const page = () => {
         <main className="home bg-image">
         <div
           className="frame_home frame_home--header"
-          style={{ backgroundImage: "url(img/7.png)", backgroundSize: "60vw" }}
+          style={{ backgroundImage: "url(/img/7.png)", backgroundSize: "60vw" }}
         >
         <motion.div 
           animate={{ x: "0%", opacity: 1 }}
@@ -401,7 +401,7 @@ const page = () => {
           <div className="content_home content_home--sticky content_home--grid" ref={el => contentRefs.current[0] = el} >
             <img
               className="content_home__img content_home__img--large content_home__img--left"
-              src="img/8.png"
+              src="/img/8.png"
             />
             <h2 className="content_home__title" data-splitting 
                 data-effect="28" 
@@ -418,7 +418,7 @@ const page = () => {
           <div className="content_home content_home--sticky content_home--grid" ref={el => contentRefs.current[1] = el} >
             <img
               className="content_home__img content_home__img--large content_home__img--left"
-              src="img/9.png"
+              src="/img/9.png"
             />
             <h2 className="content_home__title" data-splitting 
                 data-effect="28" 
@@ -438,7 +438,7 @@ const page = () => {
           <div className="content_home content_home--sticky content_home--grid" ref={el => contentRefs.current[2] = el} >
             <img
               className="content_home__img content_home__img--large content_home__img--left"
-              src="img/7.png"
+              src="/img/7.png"
             />
             <h2 className="content_home__title" data-splitting 
                 data-effect="28" 
@@ -457,7 +457,7 @@ const page = () => {
           <div className="content_home content_home--sticky content_home--grid" ref={el => contentRefs.current[3] = el} >
             <img
               className="content_home__img content_home__img--large content_home__img--left"
-              src="img/10.png"
+              src="/img/10.png"
             />
             <h2 className="content_home__title" data-splitting 
                 data-effect="28" 
@@ -478,7 +478,7 @@ const page = () => {
           <div className="content_home content_home--sticky content_home--grid"  ref={el => contentRefs.current[4] = el} >
             <img
               className="content_home__img content_home__img--large content_home__img--left"
-              src="img/11.png"
+              src="/img/11.png"
             />
             <h2 className="content_home__title" data-splitting 
                 data-effect="28" 
@@ -494,7 +494,7 @@ const page = () => {
           <div className="content_home content_home--sticky content_home--grid" ref={el => contentRefs.current[5] = el} >
             <img
               className="content_home__img content_home__img--large content_home__img--left"
-              src="img/12.png"
+              src="/img/12.png"
             />
             <h2 className="content_home__title" data-splitting 
                 data-effect="28" 
@@ -518,7 +518,7 @@ const page = () => {
             Beauty and quality need the right time to be conceived and realised even in a world that is in too much of a hurry.
           </p>
           <Link href='/contact' className="btn btn-large">Contact Us</Link>
-          <img className="content_home__img spacer" src="img/7.png" />
+          <img className="content_home__img spacer" src="/img/7.png" />
         </div>
         <footer className="frame_home frame_home--footer">
           <p className="frame_home__credits">Built with <RiHeartLine /> by <a href="https://siddiq.luxima.id">Siddiq Achmad</a></p>

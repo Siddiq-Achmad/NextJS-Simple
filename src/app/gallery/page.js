@@ -527,71 +527,71 @@ const page = () => {
       <div className="grid_service grid_service--spaced" data-grid-first="" ref={gridRef}>
         <div
           className="grid_service__img pos-1"
-          style={{ backgroundImage: "url(img/39.webp)" }}
+          style={{ backgroundImage: "url(/img/39.webp)" }}
         />
         <div
           className="grid_service__img pos-2"
-          style={{ backgroundImage: "url(img/38.webp)" }}
+          style={{ backgroundImage: "url(/img/38.webp)" }}
         />
         <div
           className="grid_service__img pos-3"
-          style={{ backgroundImage: "url(img/37.webp)" }}
+          style={{ backgroundImage: "url(/img/37.webp)" }}
         />
         <div
           className="grid_service__img pos-4"
-          style={{ backgroundImage: "url(img/36.webp)" }}
+          style={{ backgroundImage: "url(/img/36.webp)" }}
         />
         <div
           className="grid_service__img pos-5"
-          style={{ backgroundImage: "url(img/35.webp)" }}
+          style={{ backgroundImage: "url(/img/35.webp)" }}
         />
         <div
           className="grid_service__img pos-6"
-          style={{ backgroundImage: "url(img/6.webp)" }}
+          style={{ backgroundImage: "url(/img/6.webp)" }}
         />
         <div
           className="grid_service__img pos-7"
-          style={{ backgroundImage: "url(img/7.webp)" }}
+          style={{ backgroundImage: "url(/img/7.webp)" }}
         />
         <div
           className="grid_service__img pos-8"
-          style={{ backgroundImage: "url(img/8.webp)" }}
+          style={{ backgroundImage: "url(/img/8.webp)" }}
         />
         <div
           className="grid_service__img pos-9"
-          style={{ backgroundImage: "url(img/9.webp)" }}
+          style={{ backgroundImage: "url(/img/9.webp)" }}
         />
         <div
           className="grid_service__img pos-10"
-          style={{ backgroundImage: "url(img/1.webp)" }}
+          style={{ backgroundImage: "url(/img/1.webp)" }}
         />
         <div
           className="grid_service__img pos-11"
-          style={{ backgroundImage: "url(img/2.webp)" }}
+          style={{ backgroundImage: "url(/img/2.webp)" }}
         />
         <div
           className="grid_service__img pos-12"
-          style={{ backgroundImage: "url(img/3.webp)" }}
+          style={{ backgroundImage: "url(/img/3.webp)" }}
         />
         <div
           className="grid_service__img pos-13"
-          style={{ backgroundImage: "url(img/4.webp)" }}
+          style={{ backgroundImage: "url(/img/4.webp)" }}
         />
         <div
           className="grid_service__img pos-14"
-          style={{ backgroundImage: "url(img/5.webp)" }}
+          style={{ backgroundImage: "url(/img/5.webp)" }}
         />
         <div
           className="grid_service__img pos-15"
-          style={{ backgroundImage: "url(img/34.webp)" }}
+          style={{ backgroundImage: "url(/img/34.webp)" }}
         />
         <div
           className="grid_service__img pos-16"
-          style={{ backgroundImage: "url(img/16.webp)" }}
+          style={{ backgroundImage: "url(/img/16.webp)" }}
         />
         <div
           className="grid_service__img pos-17"
-          style={{ backgroundImage: "url(img/17.webp)" }}
+          style={{ backgroundImage: "url(/img/17.webp)" }}
         />
       </div>
       <div className="content_service__title">
@@ -616,23 +616,23 @@ const page = () => {
       <div className="grid_service grid_service--columns grid_service--spaced" data-grid-second="" ref={gridRef}>
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/23.webp)" }}
+          style={{ backgroundImage: "url(/img/23.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/40.webp)" }}
+          style={{ backgroundImage: "url(/img/40.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/10.webp)" }}
+          style={{ backgroundImage: "url(/img/10.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/17.webp)" }}
+          style={{ backgroundImage: "url(/img/17.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/22.webp)" }}
+          style={{ backgroundImage: "url(/img/22.webp)" }}
         />
         <div className="grid_service__item pos-6">
           <h4 className="type-tiny">Vision</h4>
@@ -668,23 +668,23 @@ const page = () => {
       >
         <div
           className="grid_service__img pos-2"
-          style={{ backgroundImage: "url(img/23.webp)" }}
+          style={{ backgroundImage: "url(/img/23.webp)" }}
         />
         <div
           className="grid_service__img pos-2"
-          style={{ backgroundImage: "url(img/24.webp)" }}
+          style={{ backgroundImage: "url(/img/24.webp)" }}
         />
         <div
           className="grid_service__img pos-2"
-          style={{ backgroundImage: "url(img/25.webp)" }}
+          style={{ backgroundImage: "url(/img/25.webp)" }}
         />
         <div
           className="grid_service__img pos-2"
-          style={{ backgroundImage: "url(img/26.webp)" }}
+          style={{ backgroundImage: "url(/img/26.webp)" }}
         />
         <div
           className="grid_service__img pos-2"
-          style={{ backgroundImage: "url(img/27.webp)" }}
+          style={{ backgroundImage: "url(/img/27.webp)" }}
         />
         <div className="grid_service__item acenter pos-1">
           <h4 className="type-tiny">Craft</h4>
@@ -714,147 +714,147 @@ const page = () => {
       <div className="grid_service grid_service--spaced grid_service--small" data-grid-fourth="" ref={gridRef}>
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/28.webp)" }}
+          style={{ backgroundImage: "url(/img/28.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/29.webp)" }}
+          style={{ backgroundImage: "url(/img/29.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/30.webp)" }}
+          style={{ backgroundImage: "url(/img/30.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/1.webp)" }}
+          style={{ backgroundImage: "url(/img/1.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/2.webp)" }}
+          style={{ backgroundImage: "url(/img/2.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/3.webp)" }}
+          style={{ backgroundImage: "url(/img/3.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/4.webp)" }}
+          style={{ backgroundImage: "url(/img/4.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/5.webp)" }}
+          style={{ backgroundImage: "url(/img/5.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/6.webp)" }}
+          style={{ backgroundImage: "url(/img/6.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/7.webp)" }}
+          style={{ backgroundImage: "url(/img/7.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/8.webp)" }}
+          style={{ backgroundImage: "url(/img/8.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/9.webp)" }}
+          style={{ backgroundImage: "url(/img/9.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/10.webp)" }}
+          style={{ backgroundImage: "url(/img/10.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/11.webp)" }}
+          style={{ backgroundImage: "url(/img/11.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/12.webp)" }}
+          style={{ backgroundImage: "url(/img/12.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/13.webp)" }}
+          style={{ backgroundImage: "url(/img/13.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/14.webp)" }}
+          style={{ backgroundImage: "url(/img/14.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/15.webp)" }}
+          style={{ backgroundImage: "url(/img/15.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/16.webp)" }}
+          style={{ backgroundImage: "url(/img/16.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/17.webp)" }}
+          style={{ backgroundImage: "url(/img/17.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/18.webp)" }}
+          style={{ backgroundImage: "url(/img/18.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/19.webp)" }}
+          style={{ backgroundImage: "url(/img/19.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/20.webp)" }}
+          style={{ backgroundImage: "url(/img/20.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/21.webp)" }}
+          style={{ backgroundImage: "url(/img/21.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/22.webp)" }}
+          style={{ backgroundImage: "url(/img/22.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/23.webp)" }}
+          style={{ backgroundImage: "url(/img/23.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/24.webp)" }}
+          style={{ backgroundImage: "url(/img/24.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/25.webp)" }}
+          style={{ backgroundImage: "url(/img/25.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/26.webp)" }}
+          style={{ backgroundImage: "url(/img/26.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/27.webp)" }}
+          style={{ backgroundImage: "url(/img/27.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/28.webp)" }}
+          style={{ backgroundImage: "url(/img/28.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/29.webp)" }}
+          style={{ backgroundImage: "url(/img/29.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/30.webp)" }}
+          style={{ backgroundImage: "url(/img/30.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/31.webp)" }}
+          style={{ backgroundImage: "url(/img/31.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/32.webp)" }}
+          style={{ backgroundImage: "url(/img/32.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/33.webp)" }}
+          style={{ backgroundImage: "url(/img/33.webp)" }}
         />
       </div>
     </section>
@@ -862,147 +862,147 @@ const page = () => {
       <div className="grid_service grid_service--small" data-grid-fourth-v2="" ref={gridRef}>
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/15.webp)" }}
+          style={{ backgroundImage: "url(/img/15.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/32.webp)" }}
+          style={{ backgroundImage: "url(/img/32.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/9.webp)" }}
+          style={{ backgroundImage: "url(/mg/9.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/41.webp)" }}
+          style={{ backgroundImage: "url(/img/41.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/6.webp)" }}
+          style={{ backgroundImage: "url(/img/6.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/21.webp)" }}
+          style={{ backgroundImage: "url(/img/21.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/13.webp)" }}
+          style={{ backgroundImage: "url(/img/13.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/2.webp)" }}
+          style={{ backgroundImage: "url(/img/2.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/27.webp)" }}
+          style={{ backgroundImage: "url(/img/27.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/37.webp)" }}
+          style={{ backgroundImage: "url(/img/37.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/14.webp)" }}
+          style={{ backgroundImage: "url(/img/14.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/10.webp)" }}
+          style={{ backgroundImage: "url(/img/10.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/29.webp)" }}
+          style={{ backgroundImage: "url(/img/29.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/1.webp)" }}
+          style={{ backgroundImage: "url(/img/1.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/19.webp)" }}
+          style={{ backgroundImage: "url(/img/19.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/38.webp)" }}
+          style={{ backgroundImage: "url(/img/38.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/5.webp)" }}
+          style={{ backgroundImage: "url(/img/5.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/25.webp)" }}
+          style={{ backgroundImage: "url(/img/25.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/11.webp)" }}
+          style={{ backgroundImage: "url(/img/11.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/40.webp)" }}
+          style={{ backgroundImage: "url(/img/40.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/22.webp)" }}
+          style={{ backgroundImage: "url(/img/22.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/3.webp)" }}
+          style={{ backgroundImage: "url(/img/3.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/30.webp)" }}
+          style={{ backgroundImage: "url(/img/30.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/18.webp)" }}
+          style={{ backgroundImage: "url(/img/18.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/33.webp)" }}
+          style={{ backgroundImage: "url(/img/33.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/4.webp)" }}
+          style={{ backgroundImage: "url(/img/4.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/36.webp)" }}
+          style={{ backgroundImage: "url(/img/36.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/28.webp)" }}
+          style={{ backgroundImage: "url(/img/28.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/23.webp)" }}
+          style={{ backgroundImage: "url(/img/23.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/35.webp)" }}
+          style={{ backgroundImage: "url(/img/35.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/16.webp)" }}
+          style={{ backgroundImage: "url(/img/16.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/31.webp)" }}
+          style={{ backgroundImage: "url(/img/31.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/7.webp)" }}
+          style={{ backgroundImage: "url(/img/7.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/26.webp)" }}
+          style={{ backgroundImage: "url(/img/26.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/9.webp)" }}
+          style={{ backgroundImage: "url(/img/9.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/42.webp)" }}
+          style={{ backgroundImage: "url(/img/42.webp)" }}
         />
       </div>
     </section>
@@ -1022,83 +1022,83 @@ const page = () => {
       <div className="grid_service grid_service--spaced grid_service--wide" data-grid-fifth="" ref={gridRef}>
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/20.webp)" }}
+          style={{ backgroundImage: "url(/img/20.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/19.webp)" }}
+          style={{ backgroundImage: "url(/img/19.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/18.webp)" }}
+          style={{ backgroundImage: "url(/img/18.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/17.webp)" }}
+          style={{ backgroundImage: "url(/img/17.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/16.webp)" }}
+          style={{ backgroundImage: "url(/img/16.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/15.webp)" }}
+          style={{ backgroundImage: "url(/img/15.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/14.webp)" }}
+          style={{ backgroundImage: "url(/img/14.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/13.webp)" }}
+          style={{ backgroundImage: "url(/img/13.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/12.webp)" }}
+          style={{ backgroundImage: "url(/img/12.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/11.webp)" }}
+          style={{ backgroundImage: "url(/img/11.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/10.webp)" }}
+          style={{ backgroundImage: "url(/img/10.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/9.webp)" }}
+          style={{ backgroundImage: "url(/img/9.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/8.webp)" }}
+          style={{ backgroundImage: "url(/img/8.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/7.webp)" }}
+          style={{ backgroundImage: "url(/img/7.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/6.webp)" }}
+          style={{ backgroundImage: "url(/img/6.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/5.webp)" }}
+          style={{ backgroundImage: "url(/img/5.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/4.webp)" }}
+          style={{ backgroundImage: "url(/img/4.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/3.webp)" }}
+          style={{ backgroundImage: "url(/img/3.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/2.webp)" }}
+          style={{ backgroundImage: "url(/img/2.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/1.webp)" }}
+          style={{ backgroundImage: "url(/img/1.webp)" }}
         />
       </div>
       <div className="content_service__title">
@@ -1120,39 +1120,39 @@ const page = () => {
       <div className="grid_service grid_service--spaced grid_service--zoomed" data-grid-sixth="" ref={gridRef} >
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/42.webp)" }}
+          style={{ backgroundImage: "url(/img/42.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/10.webp)" }}
+          style={{ backgroundImage: "url(/img/10.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/40.webp)" }}
+          style={{ backgroundImage: "url(/img/40.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/19.webp)" }}
+          style={{ backgroundImage: "url(/img/19.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/1.webp)" }}
+          style={{ backgroundImage: "url(/img/1.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/12.webp)" }}
+          style={{ backgroundImage: "url(/img/12.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/38.webp)" }}
+          style={{ backgroundImage: "url(/img/38.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/13.webp)" }}
+          style={{ backgroundImage: "url(/img/13.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/36.webp)" }}
+          style={{ backgroundImage: "url(/img/36.webp)" }}
         />
       </div>
       <div className="content_service__title">
@@ -1179,43 +1179,43 @@ const page = () => {
         <div className="grid_service__img ar-rect span-2">
           <div
             className="grid_service__img-inner"
-            style={{ backgroundImage: "url(img/2.webp)" }}
+            style={{ backgroundImage: "url(/img/2.webp)" }}
           />
         </div>
         <div className="grid_service__img ar-wide">
           <div
             className="grid_service__img-inner"
-            style={{ backgroundImage: "url(img/4.webp)" }}
+            style={{ backgroundImage: "url(/img/4.webp)" }}
           />
         </div>
         <div className="grid_service__img ar-wide span-2">
           <div
             className="grid_service__img-inner"
-            style={{ backgroundImage: "url(img/6.webp)" }}
+            style={{ backgroundImage: "url(/img/6.webp)" }}
           />
         </div>
         <div className="grid_service__img span-2 ar-narrow">
           <div
             className="grid_service__img-inner"
-            style={{ backgroundImage: "url(img/8.webp)" }}
+            style={{ backgroundImage: "url(/img/8.webp)" }}
           />
         </div>
         <div className="grid_service__img ar-wide">
           <div
             className="grid_service__img-inner"
-            style={{ backgroundImage: "url(img/10.webp)" }}
+            style={{ backgroundImage: "url(/img/10.webp)" }}
           />
         </div>
         <div className="grid_service__img ar-wide span-2">
           <div
             className="grid_service__img-inner"
-            style={{ backgroundImage: "url(img/12.webp)" }}
+            style={{ backgroundImage: "url(/img/12.webp)" }}
           />
         </div>
         <div className="grid_service__img span-2 ar-narrow">
           <div
             className="grid_service__img-inner"
-            style={{ backgroundImage: "url(img/14.webp)" }}
+            style={{ backgroundImage: "url(/img/14.webp)" }}
           />
         </div>
         <div className="grid_service__item span-3">
@@ -1225,37 +1225,37 @@ const page = () => {
         <div className="grid_service__img span-2 ar-narrow">
           <div
             className="grid_service__img-inner"
-            style={{ backgroundImage: "url(img/16.webp)" }}
+            style={{ backgroundImage: "url(/img/16.webp)" }}
           />
         </div>
         <div className="grid_service__img ar-wide span-2">
           <div
             className="grid_service__img-inner"
-            style={{ backgroundImage: "url(img/18.webp)" }}
+            style={{ backgroundImage: "url(/img/18.webp)" }}
           />
         </div>
         <div className="grid_service__img ar-rect">
           <div
             className="grid_service__img-inner"
-            style={{ backgroundImage: "url(img/20.webp)" }}
+            style={{ backgroundImage: "url(/img/20.webp)" }}
           />
         </div>
         <div className="grid_service__img ar-wide span-2">
           <div
             className="grid_service__img-inner"
-            style={{ backgroundImage: "url(img/22.webp)" }}
+            style={{ backgroundImage: "url(/img/22.webp)" }}
           />
         </div>
         <div className="grid_service__img ar-narrow span-2">
           <div
             className="grid_service__img-inner"
-            style={{ backgroundImage: "url(img/24.webp)" }}
+            style={{ backgroundImage: "url(/img/24.webp)" }}
           />
         </div>
         <div className="grid_service__img ar-wide span-3">
           <div
             className="grid_service__img-inner"
-            style={{ backgroundImage: "url(img/26.webp)" }}
+            style={{ backgroundImage: "url(/img/26.webp)" }}
           />
         </div>
       </div>
@@ -1275,147 +1275,147 @@ const page = () => {
       <div className="grid_service grid_service--tiny" data-grid-eighth="" ref={gridRef}>
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/28.webp)" }}
+          style={{ backgroundImage: "url(/img/28.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/29.webp)" }}
+          style={{ backgroundImage: "url(/img/29.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/30.webp)" }}
+          style={{ backgroundImage: "url(/img/30.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/1.webp)" }}
+          style={{ backgroundImage: "url(/img/1.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/2.webp)" }}
+          style={{ backgroundImage: "url(/img/2.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/3.webp)" }}
+          style={{ backgroundImage: "url(/img/3.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/4.webp)" }}
+          style={{ backgroundImage: "url(/img/4.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/5.webp)" }}
+          style={{ backgroundImage: "url(/img/5.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/6.webp)" }}
+          style={{ backgroundImage: "url(/img/6.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/7.webp)" }}
+          style={{ backgroundImage: "url(/img/7.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/8.webp)" }}
+          style={{ backgroundImage: "url(/img/8.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/9.webp)" }}
+          style={{ backgroundImage: "url(/img/9.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/10.webp)" }}
+          style={{ backgroundImage: "url(/img/10.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/11.webp)" }}
+          style={{ backgroundImage: "url(/img/11.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/12.webp)" }}
+          style={{ backgroundImage: "url(/img/12.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/13.webp)" }}
+          style={{ backgroundImage: "url(/img/13.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/14.webp)" }}
+          style={{ backgroundImage: "url(/img/14.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/15.webp)" }}
+          style={{ backgroundImage: "url(/img/15.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/16.webp)" }}
+          style={{ backgroundImage: "url(/img/16.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/17.webp)" }}
+          style={{ backgroundImage: "url(/img/17.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/18.webp)" }}
+          style={{ backgroundImage: "url(/img/18.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/19.webp)" }}
+          style={{ backgroundImage: "url(/img/19.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/20.webp)" }}
+          style={{ backgroundImage: "url(/img/20.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/21.webp)" }}
+          style={{ backgroundImage: "url(/img/21.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/22.webp)" }}
+          style={{ backgroundImage: "url(/img/22.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/23.webp)" }}
+          style={{ backgroundImage: "url(/img/23.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/24.webp)" }}
+          style={{ backgroundImage: "url(/img/24.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/25.webp)" }}
+          style={{ backgroundImage: "url(/img/25.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/26.webp)" }}
+          style={{ backgroundImage: "url(/img/26.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/27.webp)" }}
+          style={{ backgroundImage: "url(/img/27.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/28.webp)" }}
+          style={{ backgroundImage: "url(/img/28.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/29.webp)" }}
+          style={{ backgroundImage: "url(/img/29.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/30.webp)" }}
+          style={{ backgroundImage: "url(/img/30.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/31.webp)" }}
+          style={{ backgroundImage: "url(/img/31.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/32.webp)" }}
+          style={{ backgroundImage: "url(/img/32.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/33.webp)" }}
+          style={{ backgroundImage: "url(/img/33.webp)" }}
         />
       </div>
     </section>
@@ -1435,23 +1435,23 @@ const page = () => {
       <div className="grid_service grid_service--columns" data-grid-ninth="">
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/35.webp)" }}
+          style={{ backgroundImage: "url(/img/35.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/31.webp)" }}
+          style={{ backgroundImage: "url(/img/31.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/20.webp)" }}
+          style={{ backgroundImage: "url(/img/20.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/34.webp)" }}
+          style={{ backgroundImage: "url(/img/34.webp)" }}
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(img/38.webp)" }}
+          style={{ backgroundImage: "url(/img/38.webp)" }}
         />
       </div>
     </section>

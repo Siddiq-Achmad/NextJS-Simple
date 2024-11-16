@@ -14,7 +14,7 @@ const links = [
     },
     {
         title: 'Insta',
-        url: 'https://instagram /luxima.id'
+        url: 'https://instagram.com/luxima.id'
     },
     {
         title: 'Email',
