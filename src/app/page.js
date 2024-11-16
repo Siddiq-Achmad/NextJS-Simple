@@ -78,14 +78,14 @@ const page = () => {
 
   useEffect(() => {
   // Execute only on client-side
-  if(typeof window !== 'undefined') {
+  //if(typeof window !== 'undefined') {
     preloadImages('.content_home__img').then(() => {
       //document.body.classList.remove('loading');
       initSmoothScrolling(); // Initialize smooth scrolling
       scrollAnimations(); // Initialize scroll-triggered animations
       
     });
-  }
+  //}
 
   Splitting();
 

@@ -42,7 +42,7 @@ export default function Slider() {
         className="mySwiper"
       >
         <SwiperSlide>
-            <Image src="/img/3_big.jpg" alt="image" fill className="image" />
+            <Image src="/img/3_big.jpg" alt="image" priority fill className="image" />
             <div className="title" >
             Slide 1
           </div>
