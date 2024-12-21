@@ -6,24 +6,25 @@ import Lenis from '@studio-freight/lenis'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import Link from 'next/link'
-import { RiContactsBook2Line, RiGroup2Line, RiHeartLine, RiHome2Line, RiOpenArmLine, RiServiceLine } from '@remixicon/react'
-import Splitting from 'splitting'
-import './page.module.css'
+import { RiHeartLine } from '@remixicon/react';
+import Splitting from 'splitting';
 import Slider from './components/slider';
 import ParallaxInfo from './components/ParallaxText';
 import MenuBottom from './components/menu/MenuBottom';
 import { motion } from "motion/react"
 
 
-
 gsap.registerPlugin(ScrollTrigger);
+
+
+
 
 const page = () => {
 
   const titlesRef = useRef([]);
   const contentRefs = useRef([]); // This will store references to all .content--sticky elements
 
-  
+
   
 
   // Smooth scrolling initialization using Lenis
@@ -78,14 +79,14 @@ const page = () => {
 
   useEffect(() => {
   // Execute only on client-side
-  //if(typeof window !== 'undefined') {
+  if(typeof window !== 'undefined') {
     preloadImages('.content_home__img').then(() => {
-      //document.body.classList.remove('loading');
+      
       initSmoothScrolling(); // Initialize smooth scrolling
       scrollAnimations(); // Initialize scroll-triggered animations
       
     });
-  //}
+  }
 
   Splitting();
 
@@ -93,11 +94,12 @@ const page = () => {
   
   
         
-        
+  titlesRef.current = titlesRef.current.filter((title) => title !== null);   
   
   // Animasi GSAP dengan ScrollTrigger
   titlesRef.current.forEach((title) => {
-    const effect = title.dataset.effect;
+    //console.log(title.dataset.effect);
+    const effect = title.dataset.effect || '';
       // Effect 16
       if (effect === '16') {
         gsap.fromTo(title, {

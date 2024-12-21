@@ -870,7 +870,7 @@ const page = () => {
         />
         <div
           className="grid_service__img"
-          style={{ backgroundImage: "url(/mg/9.webp)" }}
+          style={{ backgroundImage: "url(/img/9.webp)" }}
         />
         <div
           className="grid_service__img"

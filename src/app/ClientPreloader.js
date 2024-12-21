@@ -5,14 +5,16 @@ import { useState, useEffect } from "react";
 import Preloader from '@/app/components/preloader/Preloader'
 import Loading from './loading'
 import Menu from '@/app/components/menu/Menu';
-import BacktoTop from "./components/BacktoTop";
+import BacktoTop from "@/app/components/BacktoTop";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from 'next/navigation';
+
 
 export default function ClientPreloader({ children }) {
 
   const [isLoading, setIsLoading] = useState(true);
   const pathname = usePathname();
+  
 
   useEffect(() => {
     const handleLoad = () => {

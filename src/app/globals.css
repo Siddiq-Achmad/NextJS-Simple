@@ -65,14 +65,18 @@ body {
 	overflow-x: hidden;
 	margin: 0;
 }
+main{
+	position: relative;
+}
 a:hover {
 	text-decoration: none;
 }
 .home {
 	position: relative;
 }
+
 .preloader {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100vw;
@@ -833,6 +837,7 @@ i {
 }
 
 .content_home--intro {
+	position: relative;
 	padding-top: 4em;
 	padding-bottom: 4em;
 	z-index: 2;

@@ -29,6 +29,7 @@ const Preloader = ({ onComplete }) => {
   }, [onComplete]);
 
   return (
+    <main>
     <div ref={preloaderRef} className="preloader">
       {/* Preloader content */}
       <div className='preloader__content'>
@@ -46,6 +47,7 @@ const Preloader = ({ onComplete }) => {
         </div>
       </div>
     </div>
+    </main>
   );
 };
 
